@@ -50,4 +50,3 @@ def strongPasswordChecker(password: str) -> int:
 
 print(strongPasswordChecker("bbaaaaaaaaaaaaaaacccccc"))
 print(strongPasswordChecker("aaaaAAAAAA000000123456"))
-

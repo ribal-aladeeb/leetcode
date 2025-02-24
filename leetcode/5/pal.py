@@ -5,7 +5,7 @@ def pal(s):
     for size in reversed(range(1, len(s) + 1)):
         for i in range(len(s) - size + 1):
             # the +1 is for the edge case where there is no palindrome
-            candidate = s[i: i + size]
+            candidate = s[i : i + size]
             if candidate == candidate[::-1]:
                 return candidate
 
@@ -25,8 +25,10 @@ def sami(s):
         if len(indices[letter]) > 1:
             combis = list(combinations(indices[letter], 2))
             for comb in combis:
-                if comb[1]-comb[0]+1 > len(largest_yet) and is_palind(s[comb[0]:comb[1]+1]):
-                    largest_yet = s[comb[0]: comb[1]+1]
+                if comb[1] - comb[0] + 1 > len(largest_yet) and is_palind(
+                    s[comb[0] : comb[1] + 1]
+                ):
+                    largest_yet = s[comb[0] : comb[1] + 1]
 
     if number_of_repeated_letters == 0:
         return s[0]

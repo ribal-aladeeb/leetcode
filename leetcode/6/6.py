@@ -1,7 +1,6 @@
-
-'''
+"""
 https://leetcode.com/problems/zigzag-conversion/
-'''
+"""
 
 
 def solution(s: str, numRows: int):
@@ -18,7 +17,7 @@ def solution(s: str, numRows: int):
             rows[forward_iter] += word[i]
             i += 1
 
-        for backward_iter in reversed(range(1, numRows-1)):
+        for backward_iter in reversed(range(1, numRows - 1)):
             if i >= len(word):
                 break
             rows[backward_iter] += word[i]
@@ -27,4 +26,4 @@ def solution(s: str, numRows: int):
     return "".join(rows)
 
 
-print(solution('a', 1))
+print(solution("a", 1))

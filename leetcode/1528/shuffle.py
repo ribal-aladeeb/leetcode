@@ -19,8 +19,8 @@ def solution(nums1: List[int], nums2: List[int]) -> float:
 
     N = len(merged)
     if N % 2 == 0:
-        median = (merged[N/2] + merged[N/2-1])/2
+        median = (merged[N / 2] + merged[N / 2 - 1]) / 2
     else:
-        median = merged[N//2]
-    
+        median = merged[N // 2]
+
     return median

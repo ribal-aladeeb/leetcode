@@ -8,7 +8,8 @@ def removeDuplicates(nums):
             hashmap[nums[i]] = True
     return len(nums)
 
-yo = [1,2,2,2,5,4,4,1,1]
+
+yo = [1, 2, 2, 2, 5, 4, 4, 1, 1]
 
 print(removeDuplicates(nums=yo))
 print(yo)
