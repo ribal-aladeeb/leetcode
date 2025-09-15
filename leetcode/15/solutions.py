@@ -70,7 +70,7 @@ def optimized(nums: list[int]) -> list[list[int]]:
 def optimal2(nums: list[int]) -> list[list[int]]:
     sorted_nums = sorted(nums)
     solutions = set()
-    for i in range(len(nums) - 3):
+    for i in range(len(nums) - 2):
         j = i + 1
         k = len(nums) - 1
         target = -sorted_nums[i]
@@ -80,10 +80,10 @@ def optimal2(nums: list[int]) -> list[list[int]]:
                 solutions.add(
                     tuple(sorted([sorted_nums[i], sorted_nums[j], sorted_nums[k]]))
                 )
-                i += 1
+                j += 1
                 k -= 1
             elif complement < target:
-                i += 1
+                j += 1
             else:
                 k -= 1
     return [list(triplet) for triplet in solutions]
