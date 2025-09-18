@@ -9,10 +9,10 @@ class Solution:
             else:
                 if len(stack) == 0:
                     return False
-                matching = stack.append()
+                matching = stack.pop()
                 if char != opening[matching]:
                     return False
-        return True if len(stack) == 0 else False
+        return len(stack) == 0
 
 
 print(Solution.isValid(s="([{}])"))
